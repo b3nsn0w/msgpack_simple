@@ -3,6 +3,8 @@ name = "msgpack_simple"
 version = "1.0.0"
 authors = ["Ben Snow <balintbence97@gmail.com>"]
 edition = "2018"
+description = "Simplified, easy to use, pure Rust MessagePack implementation focused on handling dynamic data structures."
+license = "MIT"
 
 [dependencies]
 byteorder = "1"
