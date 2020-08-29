@@ -476,13 +476,13 @@ impl MsgPack {
                 } else if length == 16 {
                     result.push(0xd8);
                 } else if length <= 0x88 {
-                    result.push(0xc4);
+                    result.push(0xc7);
                     result.write_u8(length as u8).unwrap();
                 } else if length <= 0x8888 {
-                    result.push(0xc5);
+                    result.push(0xc8);
                     result.write_u16::<BigEndian>(length as u16).unwrap();
                 } else {
-                    result.push(0xc6);
+                    result.push(0xc9);
                     result.write_u32::<BigEndian>(length as u32).unwrap();
                 }
 
